@@ -7,18 +7,6 @@ body {
     background-repeat: no-repeat;
 }
 
-.name{
-    font-size: 60Px;
-    position: absolute;
-    top: 5%;
-    left: 13%;
-}
-
-.top{
-    margin-bottom:300px;
-    display: flex;
-}
-
 h1 {
     color: blanchedalmond;
     font-size: 50px;
@@ -34,13 +22,6 @@ p {
     font-size: 20px;
     font-family: "Kosugi Maru", sans-serif;
 }
-.penerope img{
-    position: absolute;
-    top: 10%;
-    left: 70%;
-    width: 200px;
-    height: 200px;
-}
 section{
     border-color: blanchedalmond;
     border-width: thick;
@@ -49,4 +30,25 @@ section{
 }
 a{
     color: aquamarine;
+}
+
+.name{
+    font-size: 60Px;
+    position: absolute;
+    top: 5%;
+    left: 13%;
+}
+.top{
+    margin-bottom:300px;
+    display: flex;
+}
+.under1 {
+  border-bottom: solid 2px whitesmoke;
+}
+.penerope img{
+    position: absolute;
+    top: 10%;
+    left: 70%;
+    width: 200px;
+    height: 200px;
 }
