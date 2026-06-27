@@ -1,54 +1,125 @@
 @charset "UTF-8";
 
+:root {
+    --bg: #11161f;
+    --chrome: #1a212c;
+    --side: #161c26;
+    --editor: #1c232e;
+    --line: #2b3543;
+    --gutter: #4a586b;
+    --text: #eef3f9;
+    --dim: #9eacbd;
+    --green: #79eaa0;     /* comments / headings */
+    --cyan: #74dcea;      /* keys */
+    --amber: #f2ca8e;     /* strings / dates */
+    --magenta: #e6a8e6;   /* tags */
+    --blue: #7db4ff;      /* links */
+    --mono: "JetBrains Mono", monospace;
+    --body: "Noto Sans JP", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
-    background-color: black;
-    background-image: url(background.webp);
-    background-size: 100% 300px;
-    background-repeat: no-repeat;
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: var(--mono); font-size: 15px; line-height: 1.85;
+    min-height: 100vh; padding: 24px;
 }
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
 
-h1 {
-    color: blanchedalmond;
-    font-size: 50px;
+.window {
+    max-width: 1240px; margin: 0 auto;
+    background: var(--editor); border: 1px solid var(--line);
+    border-radius: 12px; overflow: hidden;
+    box-shadow: 0 24px 70px rgba(0,0,0,.5);
 }
-h2{
-    color: whitesmoke;
+.titlebar {
+    display: flex; align-items: center; gap: 8px;
+    padding: 11px 16px; background: var(--chrome); border-bottom: 1px solid var(--line);
 }
-h4{
-    color: whitesmoke;
-}
-p {
-    color: whitesmoke;
-    font-size: 20px;
-    font-family: "Kosugi Maru", sans-serif;
-}
-section{
-    border-color: blanchedalmond;
-    border-width: thick;
-    border-style: solid;
-    margin-bottom: 10px;
-}
-a{
-    color: aquamarine;
-}
+.dot { width: 12px; height: 12px; border-radius: 50%; }
+.r { background: #ff5f57; } .y { background: #febc2e; } .g { background: #28c840; }
+.titlebar .title { margin: 0 auto; color: var(--dim); font-size: 13px; }
 
-.name{
-    font-size: 60Px;
-    position: absolute;
-    top: 5%;
-    left: 13%;
+.frame { display: flex; min-height: 540px; }
+
+/* file tree */
+.sidebar { width: 220px; flex-shrink: 0; background: var(--side); border-right: 1px solid var(--line); padding: 14px 0; }
+.sb-head { color: var(--dim); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; padding: 4px 18px 10px; }
+.sb-group { color: var(--text); font-size: 13px; padding: 4px 14px; display: flex; align-items: center; gap: 6px; }
+.sb-group::before { content: "▾"; color: var(--dim); font-size: 10px; }
+.sidebar a { display: flex; align-items: center; gap: 8px; color: var(--dim); padding: 5px 14px 5px 30px; font-size: 13.5px; }
+.sidebar a::before { content: ""; width: 7px; height: 9px; background: var(--amber); clip-path: polygon(0 0,70% 0,100% 28%,100% 100%,0 100%); flex-shrink: 0; }
+.sidebar a:hover { background: rgba(255,255,255,.04); color: var(--text); text-decoration: none; }
+
+/* editor area */
+.main { flex: 1; min-width: 0; }
+.tabbar { display: flex; background: var(--side); border-bottom: 1px solid var(--line); overflow-x: auto; }
+.tab { padding: 9px 16px; font-size: 13px; color: var(--dim); border-right: 1px solid var(--line); white-space: nowrap; cursor: pointer; user-select: none; }
+.tab:hover { color: var(--text); }
+.tab.active { background: var(--editor); color: var(--text); border-top: 2px solid var(--amber); padding-top: 7px; }
+
+/* show/hide by language */
+body.lang-en .ja { display: none; }
+body:not(.lang-en) .en { display: none; }
+
+.editor { padding: 0 0 10px; }
+
+/* each section grouped as a file card */
+.cards { display: flex; flex-direction: column; gap: 18px; padding: 20px; }
+.filecard {
+    background: #242d3a; border: 1px solid var(--line);
+    border-radius: 10px; overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0,0,0,.22);
 }
-.top{
-    margin-bottom:300px;
-    display: flex;
+.filecard-head {
+    display: flex; align-items: center; gap: 8px;
+    padding: 9px 14px; background: var(--chrome);
+    border-bottom: 1px solid var(--line);
+    font-size: 12.5px; color: var(--dim);
 }
-.under1 {
-  border-bottom: solid 2px whitesmoke;
+.filecard-head .fico { width: 8px; height: 11px; background: var(--amber); clip-path: polygon(0 0,70% 0,100% 28%,100% 100%,0 100%); }
+.filecard-head .meta { margin-left: auto; font-size: 11px; color: var(--gutter); }
+
+/* profile hero rendered as a banner comment */
+.hero { display: flex; align-items: center; gap: 18px; padding: 22px 26px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.avatar { width: 84px; height: 84px; border-radius: 10px; object-fit: cover; border: 1px solid var(--line); }
+.hero h1 { font-size: 26px; margin: 0; color: var(--amber); }
+.hero .sub { margin: 4px 0 0; color: var(--dim); font-size: 13.5px; }
+
+/* code lines with gutter — counter resets per file card */
+.code { counter-reset: ln; padding: 12px 0; }
+.ln {
+    position: relative; padding: 2px 26px 2px 64px; min-height: 1.85em;
+    white-space: pre-wrap; word-break: break-word;
 }
-.penerope img{
-    position: absolute;
-    top: 10%;
-    left: 70%;
-    width: 200px;
-    height: 200px;
+.ln::before {
+    counter-increment: ln; content: counter(ln);
+    position: absolute; left: 0; width: 48px; text-align: right;
+    color: var(--gutter); font-size: 13px; user-select: none;
+}
+.ln:hover { background: rgba(255,255,255,.025); }
+.ln.blank { min-height: 1em; }
+
+/* syntax tokens */
+.cmt { color: var(--green); }
+.h { color: var(--green); font-weight: 700; }
+.key { color: var(--cyan); }
+.op { color: var(--dim); }
+.str { color: var(--amber); }
+.date { color: var(--amber); }
+.bullet { color: var(--green); }
+.tag { color: var(--magenta); }
+.prose { font-family: var(--body); font-size: 15.5px; }
+.name-hl { border-bottom: 2px solid var(--amber); }
+
+/* statusbar */
+.statusbar { display: flex; gap: 18px; background: var(--chrome); border-top: 1px solid var(--line); padding: 6px 16px; font-size: 12px; color: var(--dim); }
+.statusbar .accent { color: var(--green); }
+
+@media (max-width: 720px) {
+    body { padding: 10px; }
+    .sidebar { display: none; }
+    .ln { padding-left: 52px; padding-right: 16px; }
+    .ln::before { width: 38px; }
 }
