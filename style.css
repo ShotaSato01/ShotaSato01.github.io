@@ -114,8 +114,10 @@ body:not(.lang-en) .en { display: none; }
 .name-hl { border-bottom: 2px solid var(--amber); }
 
 /* statusbar */
-.statusbar { display: flex; gap: 18px; background: var(--chrome); border-top: 1px solid var(--line); padding: 6px 16px; font-size: 12px; color: var(--dim); }
+.statusbar { display: flex; flex-wrap: wrap; gap: 8px 18px; background: var(--chrome); border-top: 1px solid var(--line); padding: 6px 16px; font-size: 12px; color: var(--dim); }
 .statusbar .accent { color: var(--green); }
+.statusbar .sb-link { margin-left: auto; color: var(--dim); text-decoration: none; }
+.statusbar .sb-link:hover { color: var(--cyan); }
 
 @media (max-width: 720px) {
     body { padding: 10px; }
