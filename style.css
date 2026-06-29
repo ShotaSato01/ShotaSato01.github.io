@@ -112,6 +112,7 @@ body:not(.lang-en) .en { display: none; }
 .tag { color: var(--magenta); }
 .prose { font-family: var(--body); font-size: 15.5px; }
 .name-hl { border-bottom: 2px solid var(--amber); }
+.award { float: right; margin-left: 12px; color: #ff6b6b; font-family: var(--mono); font-size: 13px; font-weight: 700; }
 
 /* statusbar */
 .statusbar { display: flex; flex-wrap: wrap; gap: 8px 18px; background: var(--chrome); border-top: 1px solid var(--line); padding: 6px 16px; font-size: 12px; color: var(--dim); }
