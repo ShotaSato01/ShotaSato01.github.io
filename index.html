@@ -1,170 +1,57 @@
 <!doctype html>
 <html lang="ja">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Shota Sato</title>
-    <meta name="description" content="佐藤 祥太 (Shota Sato) — 自然言語処理 / 一橋大学院 小町研究室">
-    <link rel="stylesheet" href="style.css">
-    <!-- Google font用 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f8fa">
+<title>Shota Sato — Personal Website</title>
+<meta name="description" content="佐藤 祥太 (Shota Sato) の個人サイト。プロフィールやこれまでの活動、研究・論文をまとめています。">
+<link rel="icon" href="penerope.jpg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Shota Sato — Personal Website">
+<meta property="og:description" content="佐藤 祥太 (Shota Sato) の個人サイト。自然言語処理の研究・論文、経歴をまとめています。">
+<meta property="og:url" content="https://shotasato01.github.io/">
+<meta property="og:image" content="https://shotasato01.github.io/penerope.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
-
 <body>
-    <div class="window">
-        <div class="titlebar">
-            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
-            <span class="title">shota-sato — ~/portfolio</span>
-        </div>
-
-        <div class="frame">
-            <aside class="sidebar">
-                <div class="sb-head">Explorer</div>
-                <div class="sb-group">PORTFOLIO</div>
-                <a href="#profile">profile.md</a>
-                <a href="#background">background.md</a>
-                <a href="#account">account.md</a>
-                <a href="#interest">interest.md</a>
-                <a href="#publication">publication.md</a>
-                <a href="#awards">awards.md</a>
-                <a href="#experience">experience.md</a>
-            </aside>
-
-            <div class="main">
-                <div class="tabbar">
-                    <span class="tab active" id="tab-ja" onclick="setLang('ja')">Japanese.md</span>
-                    <span class="tab" id="tab-en" onclick="setLang('en')">English.md</span>
-                </div>
-
-                <div class="editor">
-                    <div class="hero">
-                        <img class="avatar" src="penerope.jpg" alt="佐藤祥太">
-                        <div>
-                            <h1><span class="ja">佐藤 祥太 <span style="color:var(--dim);font-size:18px;">/ Shota Sato</span></span><span class="en">Shota Sato <span style="color:var(--dim);font-size:18px;">/ 佐藤 祥太</span></span></h1>
-                            <p class="sub"><span class="ja">自然言語処理 · 一橋大学院 小町研究室 (M2)</span><span class="en">Natural Language Processing · Komachi Lab, Hitotsubashi University (M2)</span></p>
-                        </div>
-                    </div>
-
-                    <div class="cards">
-                        <section class="filecard" id="profile">
-                            <div class="filecard-head"><span class="fico"></span>profile.md<span class="meta">4 lines</span></div>
-                            <div class="code">
-                                <div class="ln"><span class="h"># Profile</span></div>
-                                <div class="ln blank"></div>
-                                <div class="ln"><span class="key"><span class="ja">名前</span><span class="en">Name</span></span><span class="op"> : </span><span class="ja">佐藤 祥太</span><span class="en">Shota Sato (佐藤 祥太)</span></div>
-                                <div class="ln"><span class="key"><span class="ja">生年月日</span><span class="en">Birth</span></span><span class="op"> : </span><span class="str">2002 / 11 / 03</span></div>
-                                <div class="ln"><span class="key"><span class="ja">所属</span><span class="en">Affiliation</span></span><span class="op"> : </span><span class="ja">一橋大学院 SDS研究科 (修士2年) — <a href="https://hit.komachi.live/">小町研究室</a></span><span class="en">Graduate School of SDS, Hitotsubashi University (M2) — <a href="https://hit.komachi.live/">Komachi Lab</a></span></div>
-                                <div class="ln"><span class="key">E-mail</span><span class="op"> : </span><a class="str" href="mailto:shota@scl.sds.hit-u.ac.jp">shota@scl.sds.hit-u.ac.jp</a></div>
-                            </div>
-                        </section>
-
-                        <section class="filecard" id="background">
-                            <div class="filecard-head"><span class="fico"></span>background.md<span class="meta">2 lines</span></div>
-                            <div class="code">
-                                <div class="ln"><span class="h"># Background</span></div>
-                                <div class="ln blank"></div>
-                                <div class="ln"><span class="bullet">- </span><span class="date">2025.04–now</span>      <span class="ja">一橋大学院 ソーシャル・データサイエンス研究科 <a href="https://hit.komachi.live/">社会計算言語学研究室</a></span><span class="en">Graduate School of Social Data Science, Hitotsubashi University — <a href="https://hit.komachi.live/">Computational Sociolinguistics Lab</a></span></div>
-                                <div class="ln"><span class="bullet">- </span><span class="date">2021.04–2025.03</span>  <span class="ja">金沢大学 電子情報通信学類 情報通信コース <a href="https://brainlike.w3.kanazawa-u.ac.jp/">脳型情報処理研究室</a></span><span class="en">Kanazawa University, School of Electrical, Information and Communication Engineering — <a href="https://brainlike.w3.kanazawa-u.ac.jp/">Brain-like Computing Lab</a></span></div>
-                            </div>
-                        </section>
-
-                        <section class="filecard" id="account">
-                            <div class="filecard-head"><span class="fico"></span>account.md<span class="meta">4 links</span></div>
-                            <div class="code">
-                                <div class="ln"><span class="h"># Account</span></div>
-                                <div class="ln blank"></div>
-                                <div class="ln"><span class="key">X</span><span class="op">           : </span><a href="https://x.com/shota_sato01">@Shota_Sato01</a></div>
-                                <div class="ln"><span class="key">LinkedIn</span><span class="op">    : </span><a href="https://www.linkedin.com/in/shota-sato-9749663a2/">@ShotaSato</a></div>
-                                <div class="ln"><span class="key">GitHub</span><span class="op">      : </span><a href="https://github.com/ShotaSato01">@ShotaSato01</a></div>
-                                <div class="ln"><span class="key">SpeakerDeck</span><span class="op"> : </span><a href="https://speakerdeck.com/shotasato01">@ShotaSato01</a></div>
-                            </div>
-                        </section>
-
-                        <section class="filecard" id="interest">
-                            <div class="filecard-head"><span class="fico"></span>interest.md<span class="meta">3 items</span></div>
-                            <div class="code">
-                                <div class="ln"><span class="h"># Research Interest</span></div>
-                                <div class="ln blank"></div>
-                                <div class="ln"><span class="cmt">// <span class="ja">自然言語処理</span><span class="en">Natural Language Processing</span></span></div>
-                                <div class="ln"><span class="bullet">- </span><span class="ja">埋め込み表現</span><span class="en">Representation / Word Embeddings</span></div>
-                                <div class="ln"><span class="bullet">- </span>Vision and Language</div>
-                                <div class="ln"><span class="bullet">- </span>AI Safety</div>
-                            </div>
-                        </section>
-
-                        <section class="filecard" id="publication">
-                            <div class="filecard-head"><span class="fico"></span>publication.md<span class="meta">5 papers</span></div>
-                            <div class="code">
-                                <div class="ln"><span class="h"># Publication</span></div>
-                                <div class="ln blank"></div>
-
-                                <div class="ln"><span class="cmt">// International Conference</span></div>
-                                <div class="ln prose"><span class="bullet">- </span><span class="name-hl">Shota Sato</span>, Hajime Kiyama, Tosho Hirasawa, Mamoru Komachi. When Modality Gap Reduction Fails: Prediction-Level Hubness in CLIP. The 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026). October, 2026. (main, 2719/17669, 15.4%) <a class="tag" href="https://arxiv.org/abs/2609.01103">[arXiv]</a></div>
-                                <div class="ln prose"><span class="bullet">- </span>Heesu Kim, <span class="name-hl">Shota Sato</span>, Mamoru Komachi. Retrieval Without Relevance: Prompt Dependence in Small Machine Translation Models. The 4th BabyLM Workshop at EMNLP 2026 (BabyLM 2026). October, 2026.</div>
-                                <div class="ln blank"></div>
-
-                                <div class="ln"><span class="cmt">// Domestic Conference</span></div>
-                                <div class="ln prose"><span class="bullet">- </span><span class="name-hl">佐藤祥太</span>, 木山朔, 平澤寅庄, 小町守. 予測分布の偏りに着目したCLIPのモダリティギャップ分析. 情報処理学会第268回自然言語処理研究会. June, 2026. <a class="tag" href="https://ipsj.ixsq.nii.ac.jp/records/2010092">[paper]</a> <span class="award">[優秀研究賞]</span></div>
-                                <div class="ln prose"><span class="bullet">- </span><span class="name-hl">佐藤祥太</span>, 木山朔, 平澤寅庄, 小町守. CLIPのモダリティギャップは本当に埋めるべきか？. 言語処理学会第32回年次大会. March, 2026. <a class="tag" href="https://www.anlp.jp/proceedings/annual_meeting/2026/pdf_dir/C3-2.pdf">[paper]</a> <a class="tag" href="https://drive.google.com/file/d/1pq9vGmpluoo0ajwqkjbw4q27M7GoPbCD/view?usp=sharing">[poster]</a></div>
-                                <div class="ln prose"><span class="bullet">- </span><span class="name-hl">佐藤祥太</span>, 木山朔, 中島秀太, 小町守, 唐堂由其. 単語埋め込みの独立成分分析の軸が解釈ができる粒度はどれくらいか？. 言語処理学会第31回年次大会. March, 2025. <a class="tag" href="https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/P2-22.pdf">[paper]</a> <a class="tag" href="https://drive.google.com/file/d/1gRjpmwFQ_kF6hz5uDaFqxkOvjLUgb860/view?usp=sharing">[poster]</a></div>
-                                <div class="ln blank"></div>
-
-                                <div class="ln"><span class="cmt">// Symposium</span></div>
-                                <div class="ln prose"><span class="bullet">- </span><span class="name-hl">佐藤祥太</span>, 木山朔, 平澤寅庄, 小町守. CLIPにおける埋め込みのノルムは本当に捨てて良いのか？. 第21回言語処理若手シンポジウム. August, 2026. <a class="tag" href="https://drive.google.com/file/d/1tS325QARbUBgotoupfsbFQaXgd4aCRYq/view?usp=sharing">[poster]</a> <span class="award">[奨励賞][株式会社ABEJA賞]</span></div>
-                                <div class="ln prose"><span class="bullet">- </span> 北村有彩, <span class="name-hl">佐藤祥太</span>, 小町守, 鈴木久美, 欅惇志. 有害カテゴリのマルチラベルデータセットの構築とカテゴリ間相互作用の分析. 第21回言語処理若手シンポジウム. August, 2026.
-                            </div>
-                        </section>
-
-                        <section class="filecard" id="awards">
-                            <div class="filecard-head"><span class="fico"></span>awards.md<span class="meta">3 award</span></div>
-                            <div class="code">
-                                <div class="ln"><span class="h"># Awards</span></div>
-                                <div class="ln blank"></div>
-                                <div class="ln prose"><span class="bullet">- </span><span class="date">2026.08</span>  <span class="award"><span class="ja">奨励賞</span><span class="en">Encouragement Award</span></span> (22/231) — <span class="ja">第21回言語処理若手シンポジウム</span><span class="en">The 21st Symposium of the Young Researcher Association for NLP Studies (YANS)</span> <a class="tag" href="https://yans.anlp.jp/entry/award#%E5%A5%A8%E5%8A%B1%E8%B3%9E-%E5%AF%BE%E8%B1%A1231%E4%BB%B6%E4%B8%AD22%E4%BB%B6">[link]</a></div>
-                                <div class="ln prose"><span class="bullet">- </span><span class="date">2026.08</span>  <span class="award"><span class="ja">スポンサー賞 (株式会社ABEJA賞)</span><span class="en">Sponsor Award</span></span> — <span class="ja">第21回言語処理若手シンポジウム</span><span class="en">The 21st Symposium of the Young Researcher Association for NLP Studies (YANS)</span> <a class="tag" href="https://yans.anlp.jp/entry/award#%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BEABEJA%E8%B3%9E">[link]</a></div>
-                                <div class="ln prose"><span class="bullet">- </span><span class="date">2026.06</span>  <span class="award"><span class="ja">優秀研究賞</span><span class="en">Outstanding Paper Award</span></span> (1/12) — <span class="ja">情報処理学会 第268回自然言語処理研究会</span><span class="en">The 268th Special Interest Group on Natural Language Processing of the Information Processing Society of Japan</span> <a class="tag" href="https://sites.google.com/sig-nl.ipsj.or.jp/sig-nl/%E6%8E%88%E8%B3%9E/outstanding?authuser=0#h.btf3rkj27e58">[link]</a></div>
-                            </div>
-                        </section>
-
-                        <section class="filecard" id="experience">
-                            <div class="filecard-head"><span class="fico"></span>experience.md<span class="meta">5 entries</span></div>
-                            <div class="code">
-                                <div class="ln"><span class="h"># Experience</span></div>
-                                <div class="ln blank"></div>
-                                <div class="ln"><span class="bullet">- </span><span class="date">2026.05–now</span>      <span class="ja">Research Assistant @NII LLM-jp 安全性WG</span><span class="en">Research Assistant @NII LLM-jp Safety WG</span></div>
-                                <div class="ln"><span class="bullet">- </span><span class="date">2026.04–2026.04</span>  <span class="ja">インターンシップ @株式会社IVRy</span><span class="en">Internship @IVRy Inc.</span></div>
-                                <div class="ln"><span class="bullet">- </span><span class="date">2025.10–2026.02</span>  <span class="ja">アルバイト @株式会社NexaScience</span><span class="en">Part-time @NexaScience Inc.</span> <a href="https://www.nexascience.com/news/20250715_geniac">GENIAC</a></div>
-                                <div class="ln"><span class="bullet">- </span><span class="date">2025.08–2025.08</span>  <span class="ja">インターンシップ @CyberAgent 株式会社AI Shift</span><span class="en">Internship @CyberAgent (AI Shift Inc.)</span> <a href="https://www.ai-shift.co.jp/techblog/6151">tech blog</a></div>
-                                <div class="ln"><span class="bullet">- </span><span class="date">2021.10–2025.02</span>  <span class="ja">長期インターンシップ @<a href="https://www.mitani.co.jp/">三谷産業株式会社</a></span><span class="en">Long-term internship @<a href="https://www.mitani.co.jp/">Mitani Sangyo Co., Ltd.</a></span></div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="statusbar">
-            <span class="accent">● main</span>
-            <span class="ja">修士2年 @ 小町研究室</span><span class="en">M2 @ Komachi Lab</span>
-            <span class="ja">東京, 日本</span><span class="en">Tokyo, JP</span>
-            <a href="mailto:shota@scl.sds.hit-u.ac.jp" class="sb-link">shota@scl.sds.hit-u.ac.jp</a>
-            <span>UTF-8</span>
-            <span>LF</span>
-            <span>Markdown</span>
-        </div>
-    </div>
-
-    <script>
-        function setLang(lang) {
-            document.body.classList.toggle('lang-en', lang === 'en');
-            document.getElementById('tab-ja').classList.toggle('active', lang === 'ja');
-            document.getElementById('tab-en').classList.toggle('active', lang === 'en');
-            document.documentElement.lang = lang;
-        }
-    </script>
+<a class="skip-link" href="#main">コンテンツへ / Skip to content</a>
+<div class="scroll-progress" aria-hidden="true"></div>
+<header class="site-header">
+<a class="wordmark" href="#" aria-label="Shota Sato home">shota sato</a>
+<nav aria-label="Main navigation"><a href="#profile"><span class="ja">プロフィール</span><span class="en">Profile</span></a><a href="#interest"><span class="ja">関心</span><span class="en">Interests</span></a><a href="#publication"><span class="ja">論文</span><span class="en">Publications</span></a><a href="#account"><span class="ja">連絡先</span><span class="en">Contact</span></a></nav>
+<div class="header-controls"><div class="language-switch" role="group" aria-label="Language"><button type="button" data-lang="ja" aria-pressed="true">JP</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div><button class="motion-toggle" type="button" aria-pressed="false" aria-label="アニメーションを停止" title="アニメーションを停止">Ⅱ</button></div>
+</header>
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+<div class="hero-copy"><h1 id="hero-title">Shota<br><span class="accent-name">Sato</span></h1>
+<div class="hero-person"><div><p class="person-name">佐藤 祥太</p><p class="person-affiliation"><span class="ja">一橋大学大学院 · 小町研究室 / M2</span><span class="en">Hitotsubashi University · Komachi Lab / M2</span></p></div></div>
+<a class="primary-button" href="#profile"><span class="ja">プロフィールを見る</span><span class="en">Profile</span> <span aria-hidden="true">↗</span></a>
+</div>
+<div class="hero-art"><div class="orbital-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><canvas id="embedding-art" aria-hidden="true"></canvas><img class="art-avatar" src="penerope.jpg" alt="" width="110" height="110"><a class="art-label label-profile" href="#profile"><span class="ja">プロフィール</span><span class="en">Profile</span> <span aria-hidden="true">↓</span></a><a class="art-label label-publications" href="#publication"><span class="ja">論文</span><span class="en">Publications</span> <span aria-hidden="true">↓</span></a><a class="art-label label-contact" href="#account"><span class="ja">連絡先</span><span class="en">Contact</span> <span aria-hidden="true">↓</span></a></div></div>
+</section>
+<div class="content-wrap">
+<section id="profile" class="about-section reveal"><div class="section-heading"><div><span class="eyebrow">01 / ABOUT ME</span><h2><span class="ja">プロフィール</span><span class="en">About me</span></h2></div></div><div class="about-grid"><div class="about-intro"><img src="penerope.jpg" alt="佐藤祥太のプロフィール画像" width="112" height="112" loading="lazy"><h3>佐藤 祥太<span>Shota Sato</span></h3><p><span class="ja">自然言語処理 / 一橋大学大学院<br>ソーシャル・データサイエンス研究科</span><span class="en">Natural Language Processing<br>Graduate School of Social Data Science<br>Hitotsubashi University</span></p></div><div class="profile-details"><div class="detail-row"><span class="key"><span class="ja">生年月日</span><span class="en">Birth</span></span><span class="op"> : </span><span class="str">2002 / 11 / 03</span></div><div class="detail-row"><span class="key"><span class="ja">所属</span><span class="en">Affiliation</span></span><span class="op"> : </span><span class="ja">一橋大学院 SDS研究科 (修士2年) — <a href="https://hit.komachi.live/">小町研究室</a></span><span class="en">Graduate School of SDS, Hitotsubashi University (M2) — <a href="https://hit.komachi.live/">Komachi Lab</a></span></div><div class="detail-row"><span class="key">E-mail</span><span class="op"> : </span><a class="str" href="mailto:shota@scl.sds.hit-u.ac.jp">shota@scl.sds.hit-u.ac.jp</a></div></div></div></section>
+<section id="interest" class="research-section reveal"><div class="section-heading"><div><span class="eyebrow">02 / CURRENT INTERESTS</span><h2><span class="ja">いまの関心</span><span class="en">Current interests</span></h2></div></div>
+<div class="research-grid"><a class="research-card coral-card" href="#publication" data-topic="representation"><div class="card-top"><span>01</span></div><svg class="research-symbol representation-symbol" viewBox="0 0 120 120" aria-hidden="true"><path class="axis" d="M14 12V106H108"/><g class="cluster-a"><circle cx="20" cy="30" r="5" style="--dx:14px;--dy:42px"/><circle cx="58" cy="22" r="5" style="--dx:-14px;--dy:62px"/><circle cx="30" cy="66" r="5" style="--dx:0px;--dy:20px"/><circle cx="70" cy="60" r="5" style="--dx:-24px;--dy:10px"/></g><g class="cluster-b"><circle cx="96" cy="30" r="5" style="--dx:-12px;--dy:6px"/><circle cx="48" cy="96" r="5" style="--dx:46px;--dy:-48px"/><circle cx="86" cy="90" r="5" style="--dx:-10px;--dy:-40px"/><circle cx="104" cy="66" r="5" style="--dx:-14px;--dy:-36px"/><circle cx="66" cy="44" r="5" style="--dx:14px;--dy:0px"/></g></svg><h3><span class="ja">表現学習</span><span class="en">Representation Learning</span></h3><p><span class="ja">埋め込み空間の幾何と、その学習のしくみ</span><span class="en">Geometry of embedding spaces and how they are learned</span></p><span class="card-action"><span class="when-idle"><span class="ja">関連する研究へ</span><span class="en">Related work</span> <span aria-hidden="true">↓</span></span><span class="when-active"><span class="ja">強調を解除</span><span class="en">Clear highlight</span> <span aria-hidden="true">✕</span></span></span></a><a class="research-card lime-card" href="#publication" data-topic="vision"><div class="card-top"><span>02</span></div><svg class="research-symbol vision-symbol" viewBox="0 0 120 120" aria-hidden="true"><g class="modality modality-image"><circle cx="44" cy="60" r="30"/><circle class="glyph" cx="34" cy="50" r="4"/><path class="glyph" d="M26 74l10-13 8 9 6-6 10 10"/></g><g class="modality modality-text"><circle cx="76" cy="60" r="30"/><path class="glyph" d="M70 50h22M70 60h18M70 70h22"/></g></svg><h3>Vision & Language</h3><p><span class="ja">視覚と言語をつなぐ表現</span><span class="en">Connecting visual and linguistic representations</span></p><span class="card-action"><span class="when-idle"><span class="ja">関連する研究へ</span><span class="en">Related work</span> <span aria-hidden="true">↓</span></span><span class="when-active"><span class="ja">強調を解除</span><span class="en">Clear highlight</span> <span aria-hidden="true">✕</span></span></span></a><a class="research-card lilac-card" href="#publication" data-topic="safety"><div class="card-top"><span>03</span></div><svg class="research-symbol safety-symbol" viewBox="0 0 120 120" aria-hidden="true"><circle class="pulse" cx="60" cy="62" r="46"/><path class="shield" d="M60 14l38 14v30c0 26-18 42-38 50-20-8-38-24-38-50V28z"/><path class="check" d="M44 60l12 12 22-24"/></svg><h3>AI Safety</h3><p><span class="ja">AIの安全性を考える</span><span class="en">Exploring the safety of AI</span></p><span class="card-action"><span class="when-idle"><span class="ja">関連する研究へ</span><span class="en">Related work</span> <span aria-hidden="true">↓</span></span><span class="when-active"><span class="ja">強調を解除</span><span class="en">Clear highlight</span> <span aria-hidden="true">✕</span></span></span></a></div></section>
+<section id="publication" class="publications-section reveal"><div class="section-heading"><div><span class="eyebrow">03 / PUBLICATIONS</span><h2><span class="ja">研究・論文</span><span class="en">Publications</span></h2></div></div>
+<div class="publication-toolbar"><div class="filters" role="group" aria-label="Publication category"><button type="button" data-filter="all" aria-pressed="true"><span class="ja">すべて</span><span class="en">All</span></button><button type="button" data-filter="symposium" aria-pressed="false"><span class="ja">シンポジウム</span><span class="en">Symposium</span></button><button type="button" data-filter="domestic" aria-pressed="false"><span class="ja">国内会議</span><span class="en">Domestic</span></button><button type="button" data-filter="international" aria-pressed="false"><span class="ja">国際会議</span><span class="en">International</span></button></div><div class="publication-status"><span class="sort-label"><span class="ja">新しい順</span><span class="en">Newest first</span></span><span class="paper-count" aria-live="polite">7 publications</span><button class="topic-clear" type="button" hidden><span class="topic-clear-label"></span> <span aria-hidden="true">✕</span></button></div></div>
+<div class="paper-list">
+<article class="paper" data-topics="representation vision" data-date="2026-10" data-category="international"><time class="paper-date" datetime="2026-10">2026.10</time><div><span class="paper-category"><span class="ja">国際会議</span><span class="en">International</span></span><h3>When Modality Gap Reduction Fails: Prediction-Level Hubness in CLIP</h3><p class="authors"><span class="name-hl">Shota Sato</span>, Hajime Kiyama, Tosho Hirasawa, Mamoru Komachi</p><p class="venue">The 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026). October, 2026. (main, 2719/17669, 15.4%) <a class="tag" href="https://arxiv.org/abs/2609.01103">arXiv</a></p></div></article>
+<article class="paper" data-date="2026-10" data-category="international"><time class="paper-date" datetime="2026-10">2026.10</time><div><span class="paper-category"><span class="ja">国際会議</span><span class="en">International</span></span><h3>Retrieval Without Relevance: Prompt Dependence in Small Machine Translation Models</h3><p class="authors">Heesu Kim, <span class="name-hl">Shota Sato</span>, Mamoru Komachi</p><p class="venue">The 4th BabyLM Workshop at EMNLP 2026 (BabyLM 2026). October, 2026.</p></div></article>
+<article class="paper" data-topics="representation vision" data-date="2026-08" data-category="symposium"><time class="paper-date" datetime="2026-08">2026.08</time><div><span class="paper-category"><span class="ja">シンポジウム</span><span class="en">Symposium</span></span><h3>CLIPにおける埋め込みのノルムは本当に捨てて良いのか？</h3><p class="authors"><span class="name-hl">佐藤祥太</span>, 木山朔, 平澤寅庄, 小町守</p><p class="venue">第21回言語処理若手シンポジウム. August, 2026. <a class="tag" href="https://drive.google.com/file/d/1tS325QARbUBgotoupfsbFQaXgd4aCRYq/view?usp=sharing">poster</a> <span class="award">奨励賞</span> <span class="award">株式会社ABEJA賞</span></p></div></article>
+<article class="paper" data-topics="safety" data-date="2026-08" data-category="symposium"><time class="paper-date" datetime="2026-08">2026.08</time><div><span class="paper-category"><span class="ja">シンポジウム</span><span class="en">Symposium</span></span><h3>有害カテゴリのマルチラベルデータセットの構築とカテゴリ間相互作用の分析</h3><p class="authors">北村有彩, <span class="name-hl">佐藤祥太</span>, 小町守, 鈴木久美, 欅惇志</p><p class="venue">第21回言語処理若手シンポジウム. August, 2026.</p></div></article>
+<article class="paper" data-topics="representation vision" data-date="2026-06" data-category="domestic"><time class="paper-date" datetime="2026-06">2026.06</time><div><span class="paper-category"><span class="ja">国内会議</span><span class="en">Domestic</span></span><h3>予測分布の偏りに着目したCLIPのモダリティギャップ分析</h3><p class="authors"><span class="name-hl">佐藤祥太</span>, 木山朔, 平澤寅庄, 小町守</p><p class="venue">情報処理学会第268回自然言語処理研究会. June, 2026. <a class="tag" href="https://ipsj.ixsq.nii.ac.jp/records/2010092">paper</a> <span class="award">優秀研究賞</span></p></div></article>
+<article class="paper" data-topics="representation vision" data-date="2026-03" data-category="domestic"><time class="paper-date" datetime="2026-03">2026.03</time><div><span class="paper-category"><span class="ja">国内会議</span><span class="en">Domestic</span></span><h3>CLIPのモダリティギャップは本当に埋めるべきか？</h3><p class="authors"><span class="name-hl">佐藤祥太</span>, 木山朔, 平澤寅庄, 小町守</p><p class="venue">言語処理学会第32回年次大会. March, 2026. <a class="tag" href="https://www.anlp.jp/proceedings/annual_meeting/2026/pdf_dir/C3-2.pdf">paper</a> <a class="tag" href="https://drive.google.com/file/d/1pq9vGmpluoo0ajwqkjbw4q27M7GoPbCD/view?usp=sharing">poster</a></p></div></article>
+<article class="paper" data-topics="representation" data-date="2025-03" data-category="domestic"><time class="paper-date" datetime="2025-03">2025.03</time><div><span class="paper-category"><span class="ja">国内会議</span><span class="en">Domestic</span></span><h3>単語埋め込みの独立成分分析の軸が解釈ができる粒度はどれくらいか？</h3><p class="authors"><span class="name-hl">佐藤祥太</span>, 木山朔, 中島秀太, 小町守, 唐堂由其</p><p class="venue">言語処理学会第31回年次大会. March, 2025. <a class="tag" href="https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/P2-22.pdf">paper</a> <a class="tag" href="https://drive.google.com/file/d/1gRjpmwFQ_kF6hz5uDaFqxkOvjLUgb860/view?usp=sharing">poster</a></p></div></article>
+</div></section>
+<div class="journey-grid"><section id="background" class="reveal"><div class="section-heading"><div><span class="eyebrow">04 / EDUCATION</span><h2><span class="ja">学歴</span><span class="en">Education</span></h2></div></div><div class="detail-row"><span class="date">2025.04–now</span>      <span class="ja">一橋大学院 ソーシャル・データサイエンス研究科 <a href="https://hit.komachi.live/">社会計算言語学研究室</a></span><span class="en">Graduate School of Social Data Science, Hitotsubashi University — <a href="https://hit.komachi.live/">Computational Sociolinguistics Lab</a></span></div><div class="detail-row"><span class="date">2021.04–2025.03</span>  <span class="ja">金沢大学 電子情報通信学類 情報通信コース <a href="https://brainlike.w3.kanazawa-u.ac.jp/">脳型情報処理研究室</a></span><span class="en">Kanazawa University, School of Electrical, Information and Communication Engineering — <a href="https://brainlike.w3.kanazawa-u.ac.jp/">Brain-like Computing Lab</a></span></div></section><section id="experience" class="reveal"><div class="section-heading"><div><span class="eyebrow">05 / EXPERIENCE</span><h2><span class="ja">経験</span><span class="en">Experience</span></h2></div></div><div class="detail-row" data-topics="safety"><span class="date">2026.05–now</span>      <span class="ja">Research Assistant @NII LLM-jp 安全性WG</span><span class="en">Research Assistant @NII LLM-jp Safety WG</span></div><div class="detail-row"><span class="date">2026.04–2026.04</span>  <span class="ja">インターンシップ @株式会社IVRy</span><span class="en">Internship @IVRy Inc.</span></div><div class="detail-row"><span class="date">2025.10–2026.02</span>  <span class="ja">アルバイト @株式会社NexaScience</span><span class="en">Part-time @NexaScience Inc.</span> <a href="https://www.nexascience.com/news/20250715_geniac">GENIAC</a></div><div class="detail-row"><span class="date">2025.08–2025.08</span>  <span class="ja">インターンシップ @CyberAgent 株式会社AI Shift</span><span class="en">Internship @CyberAgent (AI Shift Inc.)</span> <a href="https://www.ai-shift.co.jp/techblog/6151">tech blog</a></div><div class="detail-row"><span class="date">2021.10–2025.02</span>  <span class="ja">長期インターンシップ @<a href="https://www.mitani.co.jp/">三谷産業株式会社</a></span><span class="en">Long-term internship @<a href="https://www.mitani.co.jp/">Mitani Sangyo Co., Ltd.</a></span></div></section></div>
+<section id="awards" class="awards-section reveal"><div class="section-heading"><div><span class="eyebrow">06 / AWARDS</span><h2><span class="ja">受賞</span><span class="en">Awards</span></h2></div></div><div class="awards-list"><div class="detail-row"><span class="date">2026.08</span>  <span class="award"><span class="ja">奨励賞</span><span class="en">Encouragement Award</span></span> (22/231) — <span class="ja">第21回言語処理若手シンポジウム</span><span class="en">The 21st Symposium of the Young Researcher Association for NLP Studies (YANS)</span> <a class="tag" href="https://yans.anlp.jp/entry/award#%E5%A5%A8%E5%8A%B1%E8%B3%9E-%E5%AF%BE%E8%B1%A1231%E4%BB%B6%E4%B8%AD22%E4%BB%B6">link</a></div><div class="detail-row"><span class="date">2026.08</span>  <span class="award"><span class="ja">スポンサー賞 (株式会社ABEJA賞)</span><span class="en">Sponsor Award</span></span> — <span class="ja">第21回言語処理若手シンポジウム</span><span class="en">The 21st Symposium of the Young Researcher Association for NLP Studies (YANS)</span> <a class="tag" href="https://yans.anlp.jp/entry/award#%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BEABEJA%E8%B3%9E">link</a></div><div class="detail-row"><span class="date">2026.06</span>  <span class="award"><span class="ja">優秀研究賞</span><span class="en">Outstanding Paper Award</span></span> (1/12) — <span class="ja">情報処理学会 第268回自然言語処理研究会</span><span class="en">The 268th Special Interest Group on Natural Language Processing of the Information Processing Society of Japan</span> <a class="tag" href="https://sites.google.com/sig-nl.ipsj.or.jp/sig-nl/%E6%8E%88%E8%B3%9E/outstanding?authuser=0#h.btf3rkj27e58">link</a></div></div></section>
+<section id="account" class="connect-section reveal"><div><span class="eyebrow">07 / CONTACT</span><h2><span class="ja">連絡先</span><span class="en">Contact</span></h2><p><span class="ja">お気軽にご連絡ください。</span><span class="en">Feel free to get in touch.</span></p><a class="email-link" href="mailto:shota@scl.sds.hit-u.ac.jp">shota@scl.sds.hit-u.ac.jp</a></div><div class="social-links"><div class="detail-row"><span class="key">X</span><span class="op"> : </span><a href="https://x.com/shota_sato01">@Shota_Sato01</a></div><div class="detail-row"><span class="key">LinkedIn</span><span class="op"> : </span><a href="https://www.linkedin.com/in/shota-sato-9749663a2/">@ShotaSato</a></div><div class="detail-row"><span class="key">GitHub</span><span class="op"> : </span><a href="https://github.com/ShotaSato01">@ShotaSato01</a></div><div class="detail-row"><span class="key">SpeakerDeck</span><span class="op"> : </span><a href="https://speakerdeck.com/shotasato01">@ShotaSato01</a></div></div></section>
+</div>
+</main>
+<footer><a class="wordmark" href="#">shota sato</a><span>© 2026 Shota Sato</span><a href="#"><span class="ja">ページの先頭へ</span><span class="en">Back to top</span> ↑</a></footer>
 </body>
-
 </html>
